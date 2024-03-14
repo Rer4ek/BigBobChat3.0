@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigBobicChat", "BigBobicChat\BigBobicChat.csproj", "{FEAA8052-37B1-441F-AC1D-D47203F828E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{58995AAE-FC44-4A0D-978A-EB909B5F86CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEAA8052-37B1-441F-AC1D-D47203F828E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEAA8052-37B1-441F-AC1D-D47203F828E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEAA8052-37B1-441F-AC1D-D47203F828E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEAA8052-37B1-441F-AC1D-D47203F828E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58995AAE-FC44-4A0D-978A-EB909B5F86CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58995AAE-FC44-4A0D-978A-EB909B5F86CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58995AAE-FC44-4A0D-978A-EB909B5F86CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58995AAE-FC44-4A0D-978A-EB909B5F86CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A94C021-4564-49C0-A25D-1E7CFD8F1924}
+	EndGlobalSection
+EndGlobal
