@@ -55,9 +55,17 @@ namespace Client
 
         private async void Connect_Click(object sender, RoutedEventArgs e)
         {
-            await connection.StartAsync();
-            Connect.IsEnabled = false;
-            await connection.InvokeAsync("Send", NameField.Text, " - Подключился");
+            try
+            {
+                await connection.StartAsync();
+                Connect.IsEnabled = false;
+                await connection.InvokeAsync("Send", NameField.Text, " - Подключился");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Connection fail");
+            }
         }
+
     }
 }
