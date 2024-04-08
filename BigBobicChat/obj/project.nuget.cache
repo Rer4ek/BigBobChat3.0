@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "jlOgq3saMHiPdBF4T8ev/l8v7Omg+Umkhj1whB13RQm00MZxW0llp6xZAc4szIdO/nM93amwxQmwSLlLoi1WBA==",
+  "dgSpecHash": "gaoZrJEenKs4TAxm8rJXjaJBmy/v7seqtxnxQ6bigGzc6bYReqBAACl3AqlqJMFRA5oEdUnCXTorZvu6Jv+odQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vadim\\Desktop\\Программирование\\C#\\C# домашнее\\Rer4ek\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sbitn\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\sbitn\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\sbitn\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\sbitn\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.28\\microsoft.netcore.app.host.win-x64.6.0.28.nupkg.sha512"
+  ],
   "logs": []
 }

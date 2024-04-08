@@ -14,58 +14,40 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.AspNetCore.SignalR.Client;
 using System.Net.Http;
+using System.Data.Common;
+using System.Collections.ObjectModel;
 
 namespace Client
 {
 
     public partial class MainWindow : Window
     {
-        HubConnection connection;
+        private User _user;
+
         public MainWindow()
         {
             InitializeComponent();
 
-            var handler = new HttpClientHandler();
-            handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
+            _user = User.Singelton;
+            _user.MessageReceived += User_MessageReceived;
+            _user.Connection.InvokeAsync(HubEvents.Send, _user.Username, " - Подключился");
+        }
 
-            connection = new HubConnectionBuilder()
-                .WithUrl("https://192.168.1.113:7268/chat", options =>
-                {
-                    options.HttpMessageHandlerFactory = _ => handler;
-                })
-                .Build();
-
-            connection.On<string, string>("Receive", (user, message) =>
+        private void User_MessageReceived(string user, string message)
+        {
+            Dispatcher.Invoke(() =>
             {
-                Dispatcher.Invoke(() =>
-                {
-                    var newMessage = $"{user}: {message}";
-                    MessageListBox.Items.Insert(0, newMessage);
-                });
+                var newMessage = $"{user}: {message}";
+                MessageListBox.Items.Add(newMessage);
             });
         }
 
-        private async void TextBox_KeyDown(object sender, KeyEventArgs e)
+        private async void Message_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
-                await connection.InvokeAsync("Send", NameField.Text, Message.Text);
+                await _user.Connection.InvokeAsync(HubEvents.Send, _user.Username, Message.Text);
             }
         }
-
-        private async void Connect_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                await connection.StartAsync();
-                Connect.IsEnabled = false;
-                await connection.InvokeAsync("Send", NameField.Text, " - Подключился");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Connection fail");
-            }
-        }
-
     }
 }

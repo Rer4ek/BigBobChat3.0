@@ -1,0 +1,187 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CSharp\\BigBobChat3.0\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{58995AAE-FC44-4A0D-978A-EB909B5F86CA}|Client\\Client.csproj|d:\\csharp\\bigbobchat3.0\\client\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58995AAE-FC44-4A0D-978A-EB909B5F86CA}|Client\\Client.csproj|solutionrelative:client\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58995AAE-FC44-4A0D-978A-EB909B5F86CA}|Client\\Client.csproj|d:\\csharp\\bigbobchat3.0\\client\\hubevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58995AAE-FC44-4A0D-978A-EB909B5F86CA}|Client\\Client.csproj|solutionrelative:client\\hubevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58995AAE-FC44-4A0D-978A-EB909B5F86CA}|Client\\Client.csproj|d:\\csharp\\bigbobchat3.0\\client\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{58995AAE-FC44-4A0D-978A-EB909B5F86CA}|Client\\Client.csproj|solutionrelative:client\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58995AAE-FC44-4A0D-978A-EB909B5F86CA}|Client\\Client.csproj|d:\\csharp\\bigbobchat3.0\\client\\loginwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{58995AAE-FC44-4A0D-978A-EB909B5F86CA}|Client\\Client.csproj|solutionrelative:client\\loginwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58995AAE-FC44-4A0D-978A-EB909B5F86CA}|Client\\Client.csproj|d:\\csharp\\bigbobchat3.0\\client\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{58995AAE-FC44-4A0D-978A-EB909B5F86CA}|Client\\Client.csproj|solutionrelative:client\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58995AAE-FC44-4A0D-978A-EB909B5F86CA}|Client\\Client.csproj|d:\\csharp\\bigbobchat3.0\\client\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{58995AAE-FC44-4A0D-978A-EB909B5F86CA}|Client\\Client.csproj|solutionrelative:client\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58995AAE-FC44-4A0D-978A-EB909B5F86CA}|Client\\Client.csproj|D:\\CSharp\\BigBobChat3.0\\client\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{58995AAE-FC44-4A0D-978A-EB909B5F86CA}|Client\\Client.csproj|solutionrelative:client\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEAA8052-37B1-441F-AC1D-D47203F828E1}|BigBobicChat\\BigBobicChat.csproj|d:\\csharp\\bigbobchat3.0\\bigbobicchat\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FEAA8052-37B1-441F-AC1D-D47203F828E1}|BigBobicChat\\BigBobicChat.csproj|solutionrelative:bigbobicchat\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEAA8052-37B1-441F-AC1D-D47203F828E1}|BigBobicChat\\BigBobicChat.csproj|d:\\csharp\\bigbobchat3.0\\bigbobicchat\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEAA8052-37B1-441F-AC1D-D47203F828E1}|BigBobicChat\\BigBobicChat.csproj|solutionrelative:bigbobicchat\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEAA8052-37B1-441F-AC1D-D47203F828E1}|BigBobicChat\\BigBobicChat.csproj|d:\\csharp\\bigbobchat3.0\\bigbobicchat\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEAA8052-37B1-441F-AC1D-D47203F828E1}|BigBobicChat\\BigBobicChat.csproj|solutionrelative:bigbobicchat\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "D:\\CSharp\\BigBobChat3.0\\Client\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Client\\LoginWindow.xaml.cs",
+              "ToolTip": "D:\\CSharp\\BigBobChat3.0\\Client\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "Client\\LoginWindow.xaml.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T17:11:46.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "D:\\CSharp\\BigBobChat3.0\\Client\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "Client\\LoginWindow.xaml",
+              "ToolTip": "D:\\CSharp\\BigBobChat3.0\\Client\\LoginWindow.xaml",
+              "RelativeToolTip": "Client\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-08T16:43:07.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HubEvents.cs",
+              "DocumentMoniker": "D:\\CSharp\\BigBobChat3.0\\Client\\HubEvents.cs",
+              "RelativeDocumentMoniker": "Client\\HubEvents.cs",
+              "ToolTip": "D:\\CSharp\\BigBobChat3.0\\Client\\HubEvents.cs",
+              "RelativeToolTip": "Client\\HubEvents.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T16:09:08.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\CSharp\\BigBobChat3.0\\Client\\User.cs",
+              "RelativeDocumentMoniker": "Client\\User.cs",
+              "ToolTip": "D:\\CSharp\\BigBobChat3.0\\Client\\User.cs",
+              "RelativeToolTip": "Client\\User.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAD4vzQAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T15:37:22.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\CSharp\\BigBobChat3.0\\Client\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Client\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\CSharp\\BigBobChat3.0\\Client\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Client\\MainWindow.xaml.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAIAxwCoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T15:29:45.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\CSharp\\BigBobChat3.0\\Client\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Client\\MainWindow.xaml",
+              "ToolTip": "D:\\CSharp\\BigBobChat3.0\\Client\\MainWindow.xaml",
+              "RelativeToolTip": "Client\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-08T15:23:17.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\CSharp\\BigBobChat3.0\\Client\\App.xaml",
+              "RelativeDocumentMoniker": "Client\\App.xaml",
+              "ToolTip": "D:\\CSharp\\BigBobChat3.0\\Client\\App.xaml",
+              "RelativeToolTip": "Client\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-08T15:23:17.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "BigBobicChat\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\Properties\\launchSettings.json",
+              "RelativeToolTip": "BigBobicChat\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-08T15:23:17.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\ChatHub.cs",
+              "RelativeDocumentMoniker": "BigBobicChat\\ChatHub.cs",
+              "ToolTip": "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\ChatHub.cs",
+              "RelativeToolTip": "BigBobicChat\\ChatHub.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T15:23:17.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\Program.cs",
+              "RelativeDocumentMoniker": "BigBobicChat\\Program.cs",
+              "ToolTip": "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\Program.cs",
+              "RelativeToolTip": "BigBobicChat\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T15:23:17.232Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

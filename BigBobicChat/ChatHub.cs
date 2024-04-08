@@ -2,6 +2,7 @@
 
 namespace BigBobicChat
 {
+
     public class ChatHub : Hub
     {
         public async Task Send(string username, string message)
