@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\CSharp\BigBobChat3.0\Client\App.xaml
-2-597848694
+3-98386247
 
-9-878190763
+11-439207334
 146-418241886
-LoginWindow.xaml;MainWindow.xaml;
+CreateAccountWindow.xaml;LoginWindow.xaml;MainWindow.xaml;
 
-True
+False
 

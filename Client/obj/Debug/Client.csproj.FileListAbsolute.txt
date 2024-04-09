@@ -208,3 +208,5 @@ D:\CSharp\BigBobChat3.0\Client\obj\Debug\Client.csproj.Up2Date
 D:\CSharp\BigBobChat3.0\Client\obj\Debug\LoginWindow.g.cs
 D:\CSharp\BigBobChat3.0\Client\obj\Debug\Client_MarkupCompile.lref
 D:\CSharp\BigBobChat3.0\Client\obj\Debug\LoginWindow.baml
+D:\CSharp\BigBobChat3.0\Client\obj\Debug\CreateAccountWindow.g.cs
+D:\CSharp\BigBobChat3.0\Client\obj\Debug\CreateAccountWindow.baml
