@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj": {}
+    "C:\\Users\\Vadim\\Desktop\\Программирование\\C#\\C# important\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj": {}
   },
   "projects": {
-    "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj": {
+    "C:\\Users\\Vadim\\Desktop\\Программирование\\C#\\C# important\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj",
+        "projectUniqueName": "C:\\Users\\Vadim\\Desktop\\Программирование\\C#\\C# important\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj",
         "projectName": "BigBobicChat",
-        "projectPath": "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj",
-        "packagesPath": "C:\\Users\\sbitn\\.nuget\\packages\\",
-        "outputPath": "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\obj\\",
+        "projectPath": "C:\\Users\\Vadim\\Desktop\\Программирование\\C#\\C# important\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj",
+        "packagesPath": "C:\\Users\\Vadim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vadim\\Desktop\\Программирование\\C#\\C# important\\BigBobChat3.0\\BigBobicChat\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sbitn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vadim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,16 +38,17 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -63,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
