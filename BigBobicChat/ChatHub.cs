@@ -6,8 +6,6 @@ namespace BigBobicChat
 {
     public class ChatHub : Hub
     {
-        Database database = new Database();
-
         public async Task Send(string username, string message)
         {
             await this.Clients.All.SendAsync(HubEvents.Receive, username, message);
@@ -15,21 +13,45 @@ namespace BigBobicChat
 
         public async Task Register(string login, string username, string password)
         {
-            database.SqlAccount(login, username, password);
-            await this.Clients.Caller.SendAsync(HubEvents.RegisterReceived, true);
+            string path = $"accounts/{login}.txt";
 
+            if (File.Exists(path))
+            {
+                await this.Clients.Caller.SendAsync(HubEvents.RegisterReceived, false);
+            }
+            else
+            {
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    await sw.WriteLineAsync(login);
+                    await sw.WriteLineAsync(username);
+                    await sw.WriteLineAsync(password);
+                }
+
+                await this.Clients.Caller.SendAsync(HubEvents.RegisterReceived, true);
+            }
         }
 
         public async Task Login(string login, string password)
         {
-            string name = database.SqlAccount(login, "", password);
+            string path = $"accounts/{login}.txt";
 
-            if (name != "") 
+            if (File.Exists(path))
             {
-                await this.Clients.Caller.SendAsync(HubEvents.LoginReceived, login, name, true);
-                return;
-            }
+                using (StreamReader sr = File.OpenText(path))
+                {
+                    string? loginFromFile = await sr.ReadLineAsync();
+                    string? usernameFromFile = await sr.ReadLineAsync();
+                    string? passwordFromFile = await sr.ReadLineAsync();
 
+                    if (password == passwordFromFile)
+                    {
+                        await this.Clients.Caller.SendAsync(HubEvents.LoginReceived, loginFromFile, usernameFromFile, true);
+                        return;                    
+                    }
+                    
+                }
+            }
             await this.Clients.Caller.SendAsync(HubEvents.LoginReceived, "", "", false);
         }
 
