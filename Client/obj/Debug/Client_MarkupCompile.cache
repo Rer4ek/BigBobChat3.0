@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\CSharp\BigBobChat3.0\Client\obj\Debug\
+C:\Users\Vadim\Desktop\Программирование\C#\C# important\BigBobChat3.0\Client\obj\Debug\
 Client
 none
 false
 DEBUG;TRACE
-D:\CSharp\BigBobChat3.0\Client\App.xaml
-2-597848694
+C:\Users\Vadim\Desktop\Программирование\C#\C# important\BigBobChat3.0\Client\App.xaml
+3-98386247
 
-81203897855
-146-418241886
-LoginWindow.xaml;MainWindow.xaml;
+101642881284
+1462120183825
+CreateAccountWindow.xaml;LoginWindow.xaml;MainWindow.xaml;
 
-False
+True
 

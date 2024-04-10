@@ -1,4 +1,4 @@
-﻿namespace Client
+﻿namespace BigBobicChat
 {
     internal static class HubEvents
     {

@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="800">
+        Title="LoginWindow" Height="450" Width="800" Loaded="Window_Loaded" Closing="Window_Closing">
     <Grid>
         <Button Name="LoginButton" Content="Войти" HorizontalAlignment="Center" Height="120" Margin="0,237,0,0" VerticalAlignment="Top" Width="276" Click="LoginButton_Click"/>
         <PasswordBox Name="UserPasswordBox" HorizontalAlignment="Center" Height="33" Margin="0,151,0,0" VerticalAlignment="Top" Width="276"/>
         <TextBox Name ="UserNameTextBox" HorizontalAlignment="Center" Height="29" Margin="0,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276"/>
         <TextBlock Name="ErrorMessage" HorizontalAlignment="Center" Height="48" Margin="0,189,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276" TextAlignment="Center" Foreground="Red"/>
+        <TextBlock HorizontalAlignment="Left" Height="22" Margin="46,128,0,0" TextWrapping="Wrap" Text="Нет Аккаунта?" VerticalAlignment="Top" Width="106" TextAlignment="Center" FontSize="16"/>
+        <TextBlock Name="CreateAccount" HorizontalAlignment="Left" Height="22" Margin="62,150,0,0" TextWrapping="Wrap" Text="Создать!" VerticalAlignment="Top" Width="74" Foreground="Blue" TextAlignment="Center" FontSize="16" MouseLeftButtonUp="CreateAccount_MouseLeftButtonUp" MouseEnter="CreateAccount_MouseEnter" MouseLeave="CreateAccount_MouseLeave"/>
 
     </Grid>
 </Window>

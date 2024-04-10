@@ -17,7 +17,7 @@
         <Rectangle Fill="#202020" HorizontalAlignment="Left" Width="277" Height="Auto" Grid.ColumnSpan="4"/>
         <Rectangle Fill="#202020" Height="Auto" Margin="32,0,0,0" Grid.Column="3" Grid.ColumnSpan="2"/>
         <ListBox Name="MessageListBox" Margin="32,32,4,72" Background="Transparent" BorderBrush="#00ABADB3" Foreground="White" BorderThickness="1,1,0,0" Grid.Column="3"/>
-        <TextBox Name="Message" TextWrapping="Wrap" Text="Введите текст"  FontSize="16" BorderBrush="{x:Null}" Background="#303030" BorderThickness="1,0,0,0" Foreground="White" Margin="32,380,0,0" KeyUp="Message_KeyUp" Grid.Column="3" Grid.ColumnSpan="2">
+        <TextBox Name="Message" TextWrapping="Wrap" Text="Введите текст"  FontSize="16" BorderBrush="{x:Null}" Background="#303030" BorderThickness="1,0,0,0" Foreground="White" Margin="32,380,0,0" KeyUp="Message_KeyUp" Grid.Column="3" Grid.ColumnSpan="2" GotFocus="Message_GotFocus">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1"/>

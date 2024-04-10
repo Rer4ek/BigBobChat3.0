@@ -10,18 +10,24 @@ namespace Client
 {
     public delegate void MessageReceivedHandler(string user, string message);
 
+    public delegate void RegisterReceivedHandler(bool answer);
+
+    public delegate void LoginReceivedHandler(string login, string username, bool correct);
+
     internal class User
     {
         static public User Singelton { get; set; }
-        public bool IsConnected { get; private set; }
-        public string Username { get; set; } = "Anonymous";
-        public HubConnection Connection { get { return _connection; } }
 
         public event MessageReceivedHandler MessageReceived;
+        public event RegisterReceivedHandler RegisterReceived;
+        public event LoginReceivedHandler LoginReceived;
 
+        public bool IsConnected { get; private set; }
+        public string Username { get; set; } = "Anonymous";
+        public string Login { get; set; } = "Anonymous";
 
+        public HubConnection Connection { get { return _connection; } }
         private HubConnection _connection;
-
         private string _url = "https://192.168.1.113:7268/chat";
 
         public User()
@@ -38,10 +44,7 @@ namespace Client
                 .WithUrl(_url, options => { options.HttpMessageHandlerFactory = _ => handler; })
                 .Build();
 
-            _connection.On<string, string>(HubEvents.Receive, (user, message) =>
-            {
-                MessageReceived?.Invoke(user, message);
-            });
+            CommunicationMethods();
 
             try
             {
@@ -52,6 +55,24 @@ namespace Client
             {
                 IsConnected = false;
             }
+        }
+
+        public void CommunicationMethods()
+        {
+            _connection.On<string, string>(HubEvents.Receive, (user, message) =>
+            {
+                MessageReceived?.Invoke(user, message);
+            });
+
+            _connection.On<bool>(HubEvents.RegisterReceived, (answer) =>
+            {
+                RegisterReceived?.Invoke(answer);
+            });
+
+            _connection.On<string, string, bool>(HubEvents.LoginReceived, (login, username, correct) =>
+            {
+                LoginReceived?.Invoke(login, username, correct);
+            });
         }
 
         public async Task Disconnect()
