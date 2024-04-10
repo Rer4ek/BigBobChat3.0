@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vadim\\Desktop\\Программирование\\C#\\C# important\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj": {}
+    "C:\\Users\\Vadim\\Desktop\\test\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vadim\\Desktop\\Программирование\\C#\\C# important\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj": {
+    "C:\\Users\\Vadim\\Desktop\\test\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vadim\\Desktop\\Программирование\\C#\\C# important\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj",
+        "projectUniqueName": "C:\\Users\\Vadim\\Desktop\\test\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj",
         "projectName": "BigBobicChat",
-        "projectPath": "C:\\Users\\Vadim\\Desktop\\Программирование\\C#\\C# important\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj",
+        "projectPath": "C:\\Users\\Vadim\\Desktop\\test\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj",
         "packagesPath": "C:\\Users\\Vadim\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vadim\\Desktop\\Программирование\\C#\\C# important\\BigBobChat3.0\\BigBobicChat\\obj\\",
+        "outputPath": "C:\\Users\\Vadim\\Desktop\\test\\BigBobChat3.0\\BigBobicChat\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
