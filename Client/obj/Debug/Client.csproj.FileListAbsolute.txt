@@ -210,3 +210,7 @@ D:\CSharp\BigBobChat3.0\Client\obj\Debug\Client_MarkupCompile.lref
 D:\CSharp\BigBobChat3.0\Client\obj\Debug\LoginWindow.baml
 D:\CSharp\BigBobChat3.0\Client\obj\Debug\CreateAccountWindow.g.cs
 D:\CSharp\BigBobChat3.0\Client\obj\Debug\CreateAccountWindow.baml
+D:\CSharp\BigBobChat3.0\Client\obj\Debug\Message.g.cs
+D:\CSharp\BigBobChat3.0\Client\obj\Debug\Message.baml
+D:\CSharp\BigBobChat3.0\Client\obj\Debug\ConnectedUsers.g.cs
+D:\CSharp\BigBobChat3.0\Client\obj\Debug\ConnectedUsers.baml

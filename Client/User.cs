@@ -4,15 +4,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Client
 {
-    public delegate void MessageReceivedHandler(string user, string message);
+    public delegate void MessageReceivedHandler(MessageData messageData);
 
     public delegate void RegisterReceivedHandler(bool answer);
 
     public delegate void LoginReceivedHandler(string login, string username, bool correct);
+
+    public delegate void ConnectedReceivedHandler(UserData userData);
+
+    public delegate void DisconnectedReceivedHandler(UserData userData);
 
     internal class User
     {
@@ -21,14 +26,19 @@ namespace Client
         public event MessageReceivedHandler MessageReceived;
         public event RegisterReceivedHandler RegisterReceived;
         public event LoginReceivedHandler LoginReceived;
+        public event ConnectedReceivedHandler ConnectedReceived;
+        public event DisconnectedReceivedHandler DisconnectedReceived;
 
         public bool IsConnected { get; private set; }
-        public string Username { get; set; } = "Anonymous";
-        public string Login { get; set; } = "Anonymous";
+        public string Username { get { return _userData.Name; } set { _userData.Name = value; } }
+        public string Login { get { return _userData.Login; } set { _userData.Login = value; } }
+
+        public UserData UserData { get { return _userData; } private set { _userData = value; } }
 
         public HubConnection Connection { get { return _connection; } }
         private HubConnection _connection;
-        private string _url = "https://192.168.1.113:7268/chat";
+        private UserData _userData = new UserData();
+        private string _url = "https://localhost:7268/chat";
 
         public User()
         {
@@ -59,9 +69,9 @@ namespace Client
 
         public void CommunicationMethods()
         {
-            _connection.On<string, string>(HubEvents.Receive, (user, message) =>
+            _connection.On<MessageData>(HubEvents.Receive, (messageData) =>
             {
-                MessageReceived?.Invoke(user, message);
+                MessageReceived?.Invoke(messageData);
             });
 
             _connection.On<bool>(HubEvents.RegisterReceived, (answer) =>
@@ -72,6 +82,16 @@ namespace Client
             _connection.On<string, string, bool>(HubEvents.LoginReceived, (login, username, correct) =>
             {
                 LoginReceived?.Invoke(login, username, correct);
+            });
+
+            _connection.On<UserData>(HubEvents.ConnectedReceived, (userData) =>
+            {
+                ConnectedReceived?.Invoke(userData);
+            });
+
+            _connection.On<UserData>(HubEvents.DisconnectedReceived, (userData) =>
+            {
+                DisconnectedReceived?.Invoke(userData);
             });
         }
 

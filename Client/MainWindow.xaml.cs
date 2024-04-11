@@ -23,32 +23,68 @@ namespace Client
     public partial class MainWindow : Window
     {
         private User _user;
-
         public MainWindow()
         {
             InitializeComponent();
 
             _user = User.Singelton;
             _user.MessageReceived += User_MessageReceived;
-            _user.Connection.InvokeAsync(HubEvents.Send, _user.Username, " - Подключился");
-
-     
+            _user.ConnectedReceived += User_ConectedReceived;
+            _user.DisconnectedReceived += User_DisconectedReceived;
+            Connected();
         }
 
-        private void User_MessageReceived(string user, string message)
+        private void User_MessageReceived(MessageData messageData)
         {
             Dispatcher.Invoke(() =>
             {
-                var scrollViewer = GetDescendantByType(MessageListBox, typeof(ScrollViewer)) as ScrollViewer;
+                var scrollViewer = GetDescendantByType(Messages, typeof(ScrollViewer)) as ScrollViewer;
                 bool isAtBottom = scrollViewer.VerticalOffset == scrollViewer.ScrollableHeight;
 
-                string newMessage = $"{user}: {message}";
-                MessageListBox.Items.Add(newMessage);
+                Message messageControl = new Message(messageData);
+
+                messageControl.HorizontalAlignment = messageData.Login == _user.Login ? HorizontalAlignment.Right : HorizontalAlignment.Left;
+                messageControl.ContextMenuVisibility = messageData.Login == _user.Login ? Visibility.Visible : Visibility.Hidden;
+
+                messageControl.DeleteEvent += DeleteMessage;
+                Messages.Items.Add(messageControl);
 
                 if (isAtBottom)
                 {
                     scrollViewer.ScrollToEnd();
                 }
+            });
+        }
+
+        private void User_DisconectedReceived(UserData userData)
+        {
+            Dispatcher.Invoke(() =>
+            {
+                foreach (ConnectedUsers item in UsersOnline.Items)
+                {
+                    if (item.Login == userData.Login)
+                    {
+                        UsersOnline.Items.Remove(item);
+                        break;
+                    }
+                }
+            });
+        }
+
+        private void User_ConectedReceived(UserData userData)
+        {
+            Dispatcher.Invoke(() =>
+            {
+                foreach (ConnectedUsers item in UsersOnline.Items)
+                {
+                    if (item.Login == userData.Login)
+                    {
+                        return;
+                    }
+                }
+
+                ConnectedUsers connectedUser = new ConnectedUsers(userData);
+                UsersOnline.Items.Add(connectedUser);
             });
         }
 
@@ -74,14 +110,35 @@ namespace Client
         {
             if (e.Key == Key.Enter)
             {
-                await _user.Connection.InvokeAsync(HubEvents.Send, _user.Username, Message.Text);
-                Message.Text = "";
+                await _user.Connection.InvokeAsync(HubEvents.Send, new MessageData("", _user.Username, _user.Login, DateTime.Now.ToString("HH:mm"), MessageText.Text));
+                MessageText.Text = "";
             }
         }
 
         private void Message_GotFocus(object sender, RoutedEventArgs e)
         {
-            Message.Text = "";
+            MessageText.Text = "";
+        }
+
+        private async void Connected()
+        {
+            await _user.Connection.InvokeAsync(HubEvents.Connected, _user.UserData);
+        }
+
+        private async void Disconected()
+        {
+            await _user.Connection.InvokeAsync(HubEvents.Disconnected, _user.UserData);
+            await _user.Disconnect();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Disconected();
+        }
+
+        public void DeleteMessage(Message message)
+        {
+            Messages.Items.Remove(message);
         }
     }
 }
