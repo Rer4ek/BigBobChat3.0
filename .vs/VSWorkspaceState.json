@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\BigBobicChat"
   ],
+<<<<<<< Updated upstream
+=======
+  "SelectedNode": "\\BigBobicChat\\Database.cs",
+>>>>>>> Stashed changes
   "PreviewInSolutionExplorer": false
 }
