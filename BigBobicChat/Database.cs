@@ -113,6 +113,17 @@ namespace BigBobicChat
         }
 
 
+        public async Task DeleteMessage(MessageData message)
+        {
+            using (NpgsqlConnection npgsqlConnectrion = new NpgsqlConnection(_sql))
+            {
+                await npgsqlConnectrion.OpenAsync();
+                NpgsqlCommand npgsqlCommand = new NpgsqlCommand($"DELETE FROM messages WHERE \"messageid\" = '{message.ID}'", npgsqlConnectrion);
+                await npgsqlCommand.ExecuteNonQueryAsync();
+            }
+        }
+
+
         public async Task<List<MessageData>> GetAllMessagesAsync()
         {
             List<MessageData> messages = new List<MessageData>();

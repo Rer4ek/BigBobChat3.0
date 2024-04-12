@@ -19,6 +19,8 @@ namespace Client
 
     public delegate void DisconnectedReceivedHandler(UserData userData);
 
+    public delegate void DeleteMessageReceivedHandler(MessageData messageData);
+
     internal class User
     {
         static public User Singelton { get; set; }
@@ -28,11 +30,11 @@ namespace Client
         public event LoginReceivedHandler LoginReceived;
         public event ConnectedReceivedHandler ConnectedReceived;
         public event DisconnectedReceivedHandler DisconnectedReceived;
+        public event DeleteMessageReceivedHandler DeleteMessageReceived;
 
         public bool IsConnected { get; private set; }
         public string Username { get { return _userData.Name; } set { _userData.Name = value; } }
         public string Login { get { return _userData.Login; } set { _userData.Login = value; } }
-
         public UserData UserData { get { return _userData; } private set { _userData = value; } }
 
         public HubConnection Connection { get { return _connection; } }
@@ -93,6 +95,11 @@ namespace Client
             {
                 DisconnectedReceived?.Invoke(userData);
             });
+
+            _connection.On<MessageData>(HubEvents.DeleteMessageReceived, (messageData) =>
+            {
+                DeleteMessageReceived?.Invoke(messageData);
+            });
         }
 
         public async Task Disconnect()
@@ -102,6 +109,17 @@ namespace Client
                 await _connection.StopAsync();
                 IsConnected = false;
             }
+        }
+
+        public async void ChatConnected()
+        {
+            await _connection.InvokeAsync(HubEvents.Connected, _userData);
+        }
+
+        public async void ChatDisconected()
+        {
+            await _connection.InvokeAsync(HubEvents.Disconnected, _userData);
+            await Disconnect();
         }
     }
 }

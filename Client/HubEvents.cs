@@ -2,9 +2,14 @@
 {
     internal static class HubEvents
     {
+
         public static string Receive { get; set; } = "Receive";
 
         public static string Send { get; set; } = "Send";
+
+        public static string DeleteMessage { get; set; } = "DeleteMessage";
+
+        public static string DeleteMessageReceived { get; set; } = "DeleteMessageReceived";
 
         public static string Register { get; set; } = "Register";
 
@@ -23,6 +28,7 @@
         public static string Disconnected { get; set; } = "Disconnected";
 
         public static string DisconnectedReceived { get; set; } = "DisconnectedReceived";
+
 
     }
 }

@@ -31,14 +31,15 @@ namespace Client
             _user.MessageReceived += User_MessageReceived;
             _user.ConnectedReceived += User_ConectedReceived;
             _user.DisconnectedReceived += User_DisconectedReceived;
-            Connected();
+            _user.DeleteMessageReceived += User_DeleteMessageReceived;
+            _user.ChatConnected();
         }
 
         private void User_MessageReceived(MessageData messageData)
         {
             Dispatcher.Invoke(() =>
             {
-                var scrollViewer = GetDescendantByType(Messages, typeof(ScrollViewer)) as ScrollViewer;
+                var scrollViewer = UserElementHandler.GetDescendantByType(Messages, typeof(ScrollViewer)) as ScrollViewer;
                 bool isAtBottom = scrollViewer.VerticalOffset == scrollViewer.ScrollableHeight;
 
                 Message messageControl = new Message(messageData);
@@ -88,23 +89,20 @@ namespace Client
             });
         }
 
-        public static Visual GetDescendantByType(Visual element, Type type)
+        private void User_DeleteMessageReceived(MessageData messageData)
         {
-            if (element == null) return null;
-            if (element.GetType() == type) return element;
-            Visual foundElement = null;
-            if (element is FrameworkElement)
-                (element as FrameworkElement).ApplyTemplate();
-            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(element); i++)
+            Dispatcher.Invoke(() =>
             {
-                Visual visual = VisualTreeHelper.GetChild(element, i) as Visual;
-                foundElement = GetDescendantByType(visual, type);
-                if (foundElement != null)
-                    break;
-            }
-            return foundElement;
+                foreach (Message item in Messages.Items)
+                {
+                    if (messageData.ID == item.Id)
+                    {
+                        Messages.Items.Remove(item);
+                        return;
+                    }
+                }
+            });
         }
-
 
         private async void Message_KeyUp(object sender, KeyEventArgs e)
         {
@@ -120,25 +118,14 @@ namespace Client
             MessageText.Text = "";
         }
 
-        private async void Connected()
-        {
-            await _user.Connection.InvokeAsync(HubEvents.Connected, _user.UserData);
-        }
-
-        private async void Disconected()
-        {
-            await _user.Connection.InvokeAsync(HubEvents.Disconnected, _user.UserData);
-            await _user.Disconnect();
-        }
-
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            Disconected();
+            _user.ChatDisconected();
         }
 
         public void DeleteMessage(Message message)
         {
-            Messages.Items.Remove(message);
+            _user.Connection.InvokeAsync(HubEvents.DeleteMessage, new MessageData(message.Id, message.MessageUserName, message.Login, message.MessageTime, message.Text));
         }
     }
 }

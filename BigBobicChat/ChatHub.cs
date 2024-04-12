@@ -26,6 +26,12 @@ namespace BigBobicChat
 
         }
 
+        public async Task DeleteMessage(MessageData messageData)
+        {
+            await _database.DeleteMessage(messageData);
+            await this.Clients.All.SendAsync(HubEvents.DeleteMessageReceived, messageData);
+        }
+
         public async Task Login(string login, string password)
         {
             string name = await _database.LoginAccountAsync(login, password);

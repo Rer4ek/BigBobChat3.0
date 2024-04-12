@@ -7,6 +7,10 @@
 
         public static string Send { get; set; } = "Send";
 
+        public static string DeleteMessage { get; set; } = "DeleteMessage";
+
+        public static string DeleteMessageReceived { get; set; } = "DeleteMessageReceived";
+
         public static string Register { get; set; } = "Register";
 
         public static string RegisterReceived { get; set; } = "RegisterReceived";

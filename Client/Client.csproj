@@ -200,6 +200,7 @@
     <Compile Include="MessageData.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserData.cs" />
+    <Compile Include="UserElementHandler.cs" />
     <Page Include="ConnectedUsers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
