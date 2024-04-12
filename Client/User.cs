@@ -40,7 +40,7 @@ namespace Client
         public HubConnection Connection { get { return _connection; } }
         private HubConnection _connection;
         private UserData _userData = new UserData();
-        private string _url = "https://localhost:7268/chat";
+        private string _url = "https://192.168.75.31:7268/chat";
 
         public User()
         {
