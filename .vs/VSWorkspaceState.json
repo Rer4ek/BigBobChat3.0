@@ -1,11 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BigBobicChat"
+    "\\BigBobicChat",
+    "\\Client"
   ],
-<<<<<<< Updated upstream
-=======
-  "SelectedNode": "\\BigBobicChat\\Database.cs",
->>>>>>> Stashed changes
+  "SelectedNode": "\\Client\\LoginWindow.xaml.cs",
   "PreviewInSolutionExplorer": false
 }

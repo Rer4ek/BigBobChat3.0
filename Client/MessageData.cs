@@ -5,20 +5,20 @@ namespace Client
     public class MessageData
     {
 
-        public MessageData(string id, string name, string login, string time, string text)
+        public MessageData(int id, int idUser, string name, string time, string text)
         {
             ID = id;
+            IDUser = idUser;
             Name = name;
-            Login = login;
             Time = time;
             Text = text;
         }
 
-        public string ID { get; set; } = "";
+        public int ID { get; set; } = 0;
+
+        public int IDUser { get; set; } = 0;
 
         public string Name { get; set; } = "";
-
-        public string Login { get; set; } = "";
 
         public string Time { get; set; } = "";
 

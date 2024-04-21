@@ -32,17 +32,16 @@ namespace Client
         {
             InitializeComponent();
 
-            Login = messageData.Login;
-            Id = messageData.ID;
+            ID = messageData.ID;
             MessageUserName = messageData.Name;
             Text = messageData.Text;
             MessageTime = messageData.Time;
+            IDUser = messageData.IDUser;
         }
 
-        public string Login { get; set; } = "";
+        public int IDUser { get; set; } = 0;
 
-
-        public string Id { get; set; } = "";
+        public int ID { get; set; } = 0;
 
         [Browsable(true)]
         public string Text

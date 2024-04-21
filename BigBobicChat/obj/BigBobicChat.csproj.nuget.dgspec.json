@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj": {}
+    "D:\\VisualProjects\\Big\\BigBobicChat\\BigBobicChat.csproj": {}
   },
   "projects": {
-    "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj": {
+    "D:\\VisualProjects\\Big\\BigBobicChat\\BigBobicChat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj",
+        "projectUniqueName": "D:\\VisualProjects\\Big\\BigBobicChat\\BigBobicChat.csproj",
         "projectName": "BigBobicChat",
-        "projectPath": "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj",
+        "projectPath": "D:\\VisualProjects\\Big\\BigBobicChat\\BigBobicChat.csproj",
         "packagesPath": "C:\\Users\\sbitn\\.nuget\\packages\\",
-        "outputPath": "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\obj\\",
+        "outputPath": "D:\\VisualProjects\\Big\\BigBobicChat\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sbitn\\AppData\\Roaming\\NuGet\\NuGet.Config",

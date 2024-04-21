@@ -44,8 +44,8 @@ namespace Client
 
                 Message messageControl = new Message(messageData);
 
-                messageControl.HorizontalAlignment = messageData.Login == _user.Login ? HorizontalAlignment.Right : HorizontalAlignment.Left;
-                messageControl.ContextMenuVisibility = messageData.Login == _user.Login ? Visibility.Visible : Visibility.Hidden;
+                messageControl.HorizontalAlignment = messageData.IDUser == _user.ID ? HorizontalAlignment.Right : HorizontalAlignment.Left;
+                messageControl.ContextMenuVisibility = messageData.IDUser == _user.ID ? Visibility.Visible : Visibility.Hidden;
 
                 messageControl.DeleteEvent += DeleteMessage;
                 Messages.Items.Add(messageControl);
@@ -63,7 +63,7 @@ namespace Client
             {
                 foreach (ConnectedUsers item in UsersOnline.Items)
                 {
-                    if (item.Login == userData.Login)
+                    if (item.IDUser == userData.ID)
                     {
                         UsersOnline.Items.Remove(item);
                         break;
@@ -78,7 +78,7 @@ namespace Client
             {
                 foreach (ConnectedUsers item in UsersOnline.Items)
                 {
-                    if (item.Login == userData.Login)
+                    if (item.IDUser == userData.ID)
                     {
                         return;
                     }
@@ -95,7 +95,7 @@ namespace Client
             {
                 foreach (Message item in Messages.Items)
                 {
-                    if (messageData.ID == item.Id)
+                    if (messageData.ID == item.ID)
                     {
                         Messages.Items.Remove(item);
                         return;
@@ -108,7 +108,7 @@ namespace Client
         {
             if (e.Key == Key.Enter)
             {
-                await _user.Connection.InvokeAsync(HubEvents.Send, new MessageData("", _user.Username, _user.Login, DateTime.Now.ToString("HH:mm"), MessageText.Text));
+                await _user.Connection.InvokeAsync(HubEvents.Send, new MessageData(0, _user.ID, _user.Username, DateTime.Now.ToString("HH:mm"), MessageText.Text));
                 MessageText.Text = "";
             }
         }
@@ -125,7 +125,7 @@ namespace Client
 
         public void DeleteMessage(Message message)
         {
-            _user.Connection.InvokeAsync(HubEvents.DeleteMessage, new MessageData(message.Id, message.MessageUserName, message.Login, message.MessageTime, message.Text));
+            _user.Connection.InvokeAsync(HubEvents.DeleteMessage, new MessageData(id: message.ID, idUser: message.IDUser, name: message.MessageUserName, time: message.MessageTime, text: message.Text));
         }
     }
 }

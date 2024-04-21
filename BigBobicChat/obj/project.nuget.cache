@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wvp7BLUiqY9/AV8a89JpwNTys8eNE0NvXgqvfjbaqcHzr24H7DFxDJ5IhWrkmzC+Y5ebf2u4fpi/rO4PV8CuAg==",
+  "dgSpecHash": "1Nz2YizzgedDDQnECs7aC79Wtx0VDrXQi5CCWpd0WvmMfZNV2BxGapOSIEMLuNN9hsIuoxcN6D/dKGCvKyBi0g==",
   "success": true,
-  "projectFilePath": "D:\\CSharp\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj",
+  "projectFilePath": "D:\\VisualProjects\\Big\\BigBobicChat\\BigBobicChat.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sbitn\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
     "C:\\Users\\sbitn\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.11\\microsoft.entityframeworkcore.abstractions.7.0.11.nupkg.sha512",

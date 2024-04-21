@@ -20,7 +20,7 @@ namespace Client
     public partial class ConnectedUsers : UserControl
     {
 
-        public string Login { get; set; } = "";
+        public int IDUser { get; set; } = 0;
 
         public string UserName
         { 
@@ -44,8 +44,8 @@ namespace Client
         {
             InitializeComponent();
 
-            Login = userData.Login;
             UserName = userData.Name;
+            IDUser = userData.ID;
         }
     }
 }

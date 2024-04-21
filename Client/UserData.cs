@@ -3,18 +3,15 @@
     public class UserData
     {
 
-        public UserData(string id = "Anonymous", string name = "Anonymous", string login = "")
+        public UserData(int id = 0, string name = "Anonymous")
         {
             ID = id;
             Name = name;
-            Login = login;
         }
 
-        public string ID { get; set; } = "";
+        public int ID { get; set; } = 0;
 
         public string Name { get; set; } = "";
-
-        public string Login { get; set; } = "";
 
     }
 }

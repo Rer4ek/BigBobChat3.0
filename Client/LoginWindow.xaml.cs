@@ -73,14 +73,14 @@ namespace Client
 
         }
 
-        private void User_LoginReceived(string login, string username, bool correct)
+        private void User_LoginReceived(UserData userData)
         {
             Dispatcher.Invoke(() =>
             {
-                if (correct)
+                if (userData != null)
                 {
-                    _user.Login = login;
-                    _user.Username = username;
+                    _user.Username = userData.Name;
+                    _user.ID = userData.ID;
 
                     MainWindow mainWindow = new MainWindow();
                     mainWindow.Show();

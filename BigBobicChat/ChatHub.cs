@@ -13,6 +13,11 @@ namespace BigBobicChat
 
         private Database _database = new Database();
 
+        public ChatHub(Database database)
+        {
+            _database = database;
+        }
+
         public async Task Send(MessageData message)
         {
             message.ID = await _database.AddMessageAsync(message);
@@ -34,15 +39,8 @@ namespace BigBobicChat
 
         public async Task Login(string login, string password)
         {
-            string name = await _database.LoginAccountAsync(login, password);
-
-            if (name != "")
-            {
-                await this.Clients.Caller.SendAsync(HubEvents.LoginReceived, login, name, true);
-                return;
-            }
-
-            await this.Clients.Caller.SendAsync(HubEvents.LoginReceived, "", "", false);
+            UserData? userData = await _database.LoginAccountAsync(login, password);
+            await this.Clients.Caller.SendAsync(HubEvents.LoginReceived, userData);
         }
 
         public async Task Connected(UserData userData)
@@ -51,7 +49,6 @@ namespace BigBobicChat
             await this.Clients.Others.SendAsync(HubEvents.ConnectedReceived, userData);
 
             List<UserData> users = await _database.GetAllUsersOnlineAsync();
-            await Console.Out.WriteLineAsync(userData.Login);
             foreach (UserData user in users)
             {
                 await this.Clients.Caller.SendAsync(HubEvents.ConnectedReceived, user);

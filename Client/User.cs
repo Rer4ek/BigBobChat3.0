@@ -13,7 +13,7 @@ namespace Client
 
     public delegate void RegisterReceivedHandler(bool answer);
 
-    public delegate void LoginReceivedHandler(string login, string username, bool correct);
+    public delegate void LoginReceivedHandler(UserData userData);
 
     public delegate void ConnectedReceivedHandler(UserData userData);
 
@@ -34,7 +34,7 @@ namespace Client
 
         public bool IsConnected { get; private set; }
         public string Username { get { return _userData.Name; } set { _userData.Name = value; } }
-        public string Login { get { return _userData.Login; } set { _userData.Login = value; } }
+        public int ID { get { return _userData.ID; } set { _userData.ID = value; } }
         public UserData UserData { get { return _userData; } private set { _userData = value; } }
 
         public HubConnection Connection { get { return _connection; } }
@@ -81,9 +81,9 @@ namespace Client
                 RegisterReceived?.Invoke(answer);
             });
 
-            _connection.On<string, string, bool>(HubEvents.LoginReceived, (login, username, correct) =>
+            _connection.On<UserData>(HubEvents.LoginReceived, (userData) =>
             {
-                LoginReceived?.Invoke(login, username, correct);
+                LoginReceived?.Invoke(userData);
             });
 
             _connection.On<UserData>(HubEvents.ConnectedReceived, (userData) =>
