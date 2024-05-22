@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\VisualProjects\Big\Client\obj\Release\
+C:\Users\Vadim\Desktop\Программирование\C#\C# important\BigBobChat3.0\Client\obj\Release\
 Client
 none
 false
 TRACE
-D:\VisualProjects\Big\Client\App.xaml
+C:\Users\Vadim\Desktop\Программирование\C#\C# important\BigBobChat3.0\Client\App.xaml
 5132500793
 
 15629704773
-146317278231
+1462120183825
 ConnectedUsers.xaml;CreateAccountWindow.xaml;LoginWindow.xaml;MainWindow.xaml;Message.xaml;
 
 True

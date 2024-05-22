@@ -5,14 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="800" Loaded="Window_Loaded" Closing="Window_Closing">
+        ResizeMode="NoResize"
+        Title="LoginWindow" Height="450" Width="400" Background="#202020" Loaded="Window_Loaded" Closing="Window_Closing">
     <Grid>
-        <Button Name="LoginButton" Content="Войти" HorizontalAlignment="Center" Height="120" Margin="0,237,0,0" VerticalAlignment="Top" Width="276" Click="LoginButton_Click"/>
-        <PasswordBox Name="UserPasswordBox" HorizontalAlignment="Center" Height="33" Margin="0,151,0,0" VerticalAlignment="Top" Width="276"/>
-        <TextBox Name ="UserNameTextBox" HorizontalAlignment="Center" Height="29" Margin="0,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276"/>
-        <TextBlock Name="ErrorMessage" HorizontalAlignment="Center" Height="48" Margin="0,189,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276" TextAlignment="Center" Foreground="Red"/>
-        <TextBlock HorizontalAlignment="Left" Height="22" Margin="46,128,0,0" TextWrapping="Wrap" Text="Нет Аккаунта?" VerticalAlignment="Top" Width="106" TextAlignment="Center" FontSize="16"/>
-        <TextBlock Name="CreateAccount" HorizontalAlignment="Left" Height="22" Margin="62,150,0,0" TextWrapping="Wrap" Text="Создать!" VerticalAlignment="Top" Width="74" Foreground="Blue" TextAlignment="Center" FontSize="16" MouseLeftButtonUp="CreateAccount_MouseLeftButtonUp" MouseEnter="CreateAccount_MouseEnter" MouseLeave="CreateAccount_MouseLeave"/>
+        <Button Name="LoginButton" Content="Войти" HorizontalAlignment="Center" Height="55" Margin="0,268,0,0" VerticalAlignment="Top" Width="276" Click="LoginButton_Click" FontSize="22" Background="Azure"/>
+        <TextBlock Margin="57,96,253,0" TextWrapping="Wrap" Text="Логин" TextAlignment="Left" FontSize="16" Foreground="White" Height="27" VerticalAlignment="Top"/>
+        <TextBlock Margin="57,159,253,0" TextWrapping="Wrap" Text="Пароль" TextAlignment="Left" FontSize="16" Foreground="White" Height="27" VerticalAlignment="Top"/>
+        <PasswordBox Name="UserPasswordBox" HorizontalAlignment="Center" Height="33" Margin="0,186,0,0" VerticalAlignment="Top" Width="276" Background="#303030" BorderBrush="{x:Null}" Foreground="White"/>
+        <TextBox Name ="UserNameTextBox" HorizontalAlignment="Center" Height="29" Margin="0,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276" Background="#303030" BorderBrush="{x:Null}" Foreground="White"/>
+        <TextBlock Name="ErrorMessage" HorizontalAlignment="Center" Height="48" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276" TextAlignment="Center" Foreground="Red" Margin="0,220,0,0"/>
+        <TextBlock HorizontalAlignment="Left" Height="22" Margin="94,353,0,0" TextWrapping="Wrap" Text="Нет Аккаунта?" VerticalAlignment="Top" Width="106"  Foreground="White" TextAlignment="Center" FontSize="16"/>
+        <TextBlock Name="CreateAccount" HorizontalAlignment="Left" Height="22" Margin="205,353,0,0" TextWrapping="Wrap" Text="Создать!" VerticalAlignment="Top" Width="74" Foreground="Aquamarine" TextAlignment="Center" FontSize="16" MouseLeftButtonUp="CreateAccount_MouseLeftButtonUp" MouseEnter="CreateAccount_MouseEnter" MouseLeave="CreateAccount_MouseLeave"/>
+        <Image Margin="62,16,58,345" Source="/Resources/TestLogo.jpg" Stretch="Fill"/>
 
     </Grid>
 </Window>

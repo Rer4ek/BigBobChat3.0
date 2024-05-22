@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BigBobicChat")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6247fdd2ddebd4b9d9a92984c07c10982c332d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("BigBobicChat")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BigBobicChat")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

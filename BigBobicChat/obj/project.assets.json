@@ -717,19 +717,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sbitn\\.nuget\\packages\\": {}
+    "C:\\Users\\Vadim\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VisualProjects\\Big\\BigBobicChat\\BigBobicChat.csproj",
+      "projectUniqueName": "C:\\Users\\Vadim\\Desktop\\Программирование\\C#\\C# important\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj",
       "projectName": "BigBobicChat",
-      "projectPath": "D:\\VisualProjects\\Big\\BigBobicChat\\BigBobicChat.csproj",
-      "packagesPath": "C:\\Users\\sbitn\\.nuget\\packages\\",
-      "outputPath": "D:\\VisualProjects\\Big\\BigBobicChat\\obj\\",
+      "projectPath": "C:\\Users\\Vadim\\Desktop\\Программирование\\C#\\C# important\\BigBobChat3.0\\BigBobicChat\\BigBobicChat.csproj",
+      "packagesPath": "C:\\Users\\Vadim\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vadim\\Desktop\\Программирование\\C#\\C# important\\BigBobChat3.0\\BigBobicChat\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\sbitn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vadim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -749,11 +754,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -784,7 +784,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

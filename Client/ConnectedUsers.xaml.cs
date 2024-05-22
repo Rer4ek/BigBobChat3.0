@@ -33,7 +33,13 @@ namespace Client
             get { return UserImage.ImageSource; }
             set {  UserImage.ImageSource = value; }
         }
-        
+
+        public string UserIcon
+        {
+            get { return UserImage.ImageSource.ToString(); }
+            set { UserImage.ImageSource = new ImageSourceConverter().ConvertFromString(value) as ImageSource; }
+        }
+
 
         public ConnectedUsers()
         {
@@ -46,6 +52,7 @@ namespace Client
 
             UserName = userData.Name;
             IDUser = userData.ID;
+            UserIcon = $"Resources/{userData.UserIcon}";
         }
     }
 }
