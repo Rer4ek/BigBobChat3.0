@@ -9,14 +9,14 @@ namespace BigBobicChat
 {
     public class Database : DbContext
     {
-        private string _sql = "Server=localhost;Port=5432;Database=Chat;User Id=postgres;Password=123123";
+        private string _sql = "Server=localhost;Port=5432;Database=Chat;User Id=postgres;Password=Moper220";
 
         public void CreateTables()
         {
             using (NpgsqlConnection npgsqlConnectrion = new NpgsqlConnection(_sql))
             {
                 npgsqlConnectrion.Open();
-                NpgsqlCommand npgsqlCommand = new NpgsqlCommand("CREATE TABLE IF NOT EXISTS public.users ( id_user serial PRIMARY KEY, login VARCHAR(32) NOT NULL, user_password VARCHAR(32) NOT NULL, username VARCHAR(32) NOT NULL) TABLESPACE pg_default; ALTER TABLE IF EXISTS public.users OWNER to postgres;", npgsqlConnectrion);
+                NpgsqlCommand npgsqlCommand = new NpgsqlCommand("CREATE TABLE IF NOT EXISTS public.users ( id_user serial PRIMARY KEY, login VARCHAR(32) NOT NULL, user_password VARCHAR(32) NOT NULL, username VARCHAR(32) NOT NULL, Icon VARCHAR(128)) TABLESPACE pg_default; ALTER TABLE IF EXISTS public.users OWNER to postgres;", npgsqlConnectrion);
                 npgsqlCommand.ExecuteNonQuery();
                 npgsqlCommand = new NpgsqlCommand("CREATE TABLE IF NOT EXISTS public.messages (id_message serial PRIMARY KEY, id_user serial REFERENCES users(id_user), text_message text, dispatch_time text) TABLESPACE pg_default; ALTER TABLE IF EXISTS public.messages OWNER to postgres;", npgsqlConnectrion);
                 npgsqlCommand.ExecuteNonQuery();

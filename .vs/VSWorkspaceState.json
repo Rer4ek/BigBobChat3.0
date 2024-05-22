@@ -4,6 +4,6 @@
     "\\BigBobicChat",
     "\\Client"
   ],
-  "SelectedNode": "\\Client\\LoginWindow.xaml",
+  "SelectedNode": "\\Client\\ConnectedUsers.xaml.cs",
   "PreviewInSolutionExplorer": false
 }
